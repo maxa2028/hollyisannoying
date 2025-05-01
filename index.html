@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holly is annoying</title>
-    <style>
-        body {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holly is annoying</title>
+  <style>
+    body {
       background-color: rgb(25, 25, 25);
-      font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
       margin: 0;
       padding: 0;
-        }
-        p{
-            color: white;
-            margin: auto;
-            text-align: center;
-            padding: 25% 0;
-
-        }
-</style>
+      transition: filter 0.5s ease;
+    }
+    p {
+      color: white;
+      margin: auto;
+      text-align: center;
+      padding: 25% 0;
+    }
+  </style>
 </head>
 <body>
-<p>Holly is annoying</p>
+  <p>Holly is annoying</p>
+
+  <script>
+    let inverted = false;
+    setInterval(() => {
+      document.body.style.filter = inverted ? 'none' : 'invert(1)';
+      inverted = !inverted;
+    }, 1000);
+  </script>
 </body>
 </html>
